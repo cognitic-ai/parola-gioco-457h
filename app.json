@@ -1,7 +1,9 @@
 {
   "expo": {
+    "name": "Giochi Italiani",
+    "slug": "giochi-italiani",
     "orientation": "default",
-    "scheme": "acme",
+    "scheme": "giochi-italiani",
     "userInterfaceStyle": "automatic",
     "android": {
       "edgeToEdgeEnabled": true,
@@ -14,7 +16,8 @@
       "expo-font",
       "expo-image",
       "expo-router",
-      "expo-web-browser"
+      "expo-web-browser",
+      "@bacons/apple-colors"
     ]
   }
 }
