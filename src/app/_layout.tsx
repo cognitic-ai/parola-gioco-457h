@@ -51,6 +51,13 @@ export default function Layout() {
           }}
         />
         <Stack.Screen
+          name="caccia-parole-game"
+          options={{
+            title: "Caccia Parole",
+            headerLargeTitle: false,
+          }}
+        />
+        <Stack.Screen
           name="parole"
           options={{
             title: "Paro'le",

@@ -26,7 +26,7 @@ export default function CacciaParoleGame() {
       const newGrid = generateWordSearch(category.words, category.gridSize);
       setGrid(newGrid);
     }
-  }, [category]);
+  }, [categoryId]);
 
   if (!category) {
     return (
@@ -37,7 +37,9 @@ export default function CacciaParoleGame() {
           justifyContent: "center",
         }}
       >
-        <Text style={{ color: AC.label }}>Categoria non trovata</Text>
+        <Text style={{ color: AC.label, fontSize: 17 }}>
+          Categoria non trovata
+        </Text>
       </View>
     );
   }
@@ -82,32 +84,33 @@ export default function CacciaParoleGame() {
           borderRadius: 16,
           borderCurve: "continuous",
           padding: 16,
-          marginBottom: 24,
+          marginBottom: 20,
+          flexDirection: "row",
           alignItems: "center",
+          gap: 12,
         }}
       >
-        <Text style={{ fontSize: 40, marginBottom: 8 }}>
-          {category.emoji}
-        </Text>
-        <Text
-          style={{
-            fontSize: 24,
-            fontWeight: "700",
-            color: AC.label,
-            marginBottom: 4,
-          }}
-        >
-          {category.name}
-        </Text>
-        <Text
-          style={{
-            fontSize: 15,
-            color: AC.secondaryLabel,
-            textAlign: "center",
-          }}
-        >
-          {category.description}
-        </Text>
+        <Text style={{ fontSize: 36 }}>{category.emoji}</Text>
+        <View style={{ flex: 1 }}>
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: "700",
+              color: AC.label,
+              marginBottom: 2,
+            }}
+          >
+            {category.name}
+          </Text>
+          <Text
+            style={{
+              fontSize: 14,
+              color: AC.secondaryLabel,
+            }}
+          >
+            Swipe across letters to find words
+          </Text>
+        </View>
       </Animated.View>
 
       <WordSearchGrid
@@ -207,7 +210,7 @@ export default function CacciaParoleGame() {
                   color: AC.label,
                 }}
               >
-                Menu
+                Categorie
               </Text>
             </Pressable>
           </View>
